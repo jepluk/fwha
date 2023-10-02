@@ -3,7 +3,7 @@
 # Tentang
 - Ini adalah alat untuk membuat hosting secara gratis dari website freewebhostingarea.com
 
-# Usage
+# Penggunaan
 
 • 1 Pemasangan
 ```
