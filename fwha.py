@@ -30,8 +30,7 @@ def request(ses, hostname, domain):
         else: print(f'{M}Gagal aktivasi hostname {P}{url}')
 
     elif 'Invalid domain name format' in web.text: print(url +'Invalid domain name format')
-    else:
-        prinr(web)
+    else: print(M +'notfound error')
 
 if __name__ == "__main__":
     os.system('clear')
