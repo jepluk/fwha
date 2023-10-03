@@ -26,7 +26,7 @@ def request(ses, hostname, domain):
         data = {'action':'validate','email':mail ,'domainName': domain_name, 'password': passw, 'confirmPassword': passw, 'agree':'1'}
 
         web = bs(ses.post('https://newserv.freewha.com/cgi-bin/create_ini.cgi', data=data).text, 'html.parser')
-        if 'was successfully activated. Your address is' in web.text: print(f'\n{M} >{H} BERHASIL AKTIFASI\n{M} >{P} FTP Server/Host: {J}{url}\n{M} >{P} FTP Login/Username: {J}{url}\n{M} >{P} Password: {J}{passw}\n{M} >{P} Control panel: {J}{url}/cpanel\n{M} >{P} FTP Client: {J}{url}/ftp/')
+        if 'was successfully activated. Your address is' in web.text: print(f'\n{M} >{H} BERHASIL AKTIFASI\n{M} >{P} FTP Server/Host: {J}{domain_name}\n{M} >{P} FTP Login/Username: {J}{domain_name}\n{M} >{P} Password: {J}{passw}\n{M} >{P} Control panel: {J}{domain_name}/cpanel\n{M} >{P} FTP Client: {J}{domain_name}/ftp/')
         else: print(f'{M}Gagal aktivasi hostname {P}{url}')
 
     elif 'Invalid domain name format' in web.text: print(url +'Invalid domain name format')
